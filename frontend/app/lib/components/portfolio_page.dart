@@ -6,10 +6,10 @@ class PortfolioPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final history = [
-      {'date': '27/02', 'action': 'Compra', 'startup': 'GreenLoop', 'amount': '+400 GRL', 'value': 'R\$ 64,00', 'type': 'buy'},
-      {'date': '25/02', 'action': 'Compra', 'startup': 'FinnoLab', 'amount': '+250 FNL', 'value': 'R\$ 25,00', 'type': 'buy'},
-      {'date': '22/02', 'action': 'Compra', 'startup': 'DataBrave', 'amount': '+150 DBR', 'value': 'R\$ 15,00', 'type': 'buy'},
-      {'date': '18/02', 'action': 'Depósito', 'startup': '—', 'amount': '+R\$ 200,00', 'value': 'R\$ 200,00', 'type': 'deposit'},
+      {'date': '00/00', 'action': '---------', 'startup': '---------', 'amount': '+%%%% ---', 'value': 'R\$ %%%%', 'type': 'buy'},
+      {'date': '00/00', 'action': '---------', 'startup': '---------', 'amount': '+%%%% ---', 'value': 'R\$ %%%%', 'type': 'buy'},
+      {'date': '00/00', 'action': '---------', 'startup': '---------', 'amount': '+%%%% ---', 'value': 'R\$ %%%%', 'type': 'buy'},
+      {'date': '00/00', 'action': '---------', 'startup': '---------', 'amount': '+R\$ %%%%', 'value': 'R\$ %%%%', 'type': 'deposit'},
     ];
 
     return SingleChildScrollView(
@@ -81,7 +81,7 @@ class PortfolioPage extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          'R\$ 104,00',
+                          'R\$ %%%%',
                           style: TextStyle(
                             fontFamily: 'Inter',
                             fontSize: 24,
@@ -102,7 +102,7 @@ class PortfolioPage extends StatelessWidget {
                           Icon(Icons.trending_up, size: 12, color: Color(0xFF4CAF50)),
                           SizedBox(width: 4),
                           Text(
-                            '0,00%',
+                            '%%%%%',
                             style: TextStyle(
                               color: Color(0xFF4CAF50),
                               fontFamily: 'Inter',
@@ -125,21 +125,21 @@ class PortfolioPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text('Investido', style: TextStyle(color: Color(0xFF777777), fontFamily: 'Inter', fontSize: 11)),
-                        Text('R\$ 104,00', style: TextStyle(fontFamily: 'Inter', fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF333333))),
+                        Text('R\$ %%%%', style: TextStyle(fontFamily: 'Inter', fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF333333))),
                       ],
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text('P&L', style: TextStyle(color: Color(0xFF777777), fontFamily: 'Inter', fontSize: 11)),
-                        Text('R\$ 0,00', style: TextStyle(fontFamily: 'Inter', fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF4CAF50))),
+                        Text('R\$ %%%%', style: TextStyle(fontFamily: 'Inter', fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF4CAF50))),
                       ],
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text('Posições', style: TextStyle(color: Color(0xFF777777), fontFamily: 'Inter', fontSize: 11)),
-                        Text('3', style: TextStyle(fontFamily: 'Inter', fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF333333))),
+                        Text('%%%%', style: TextStyle(fontFamily: 'Inter', fontSize: 14, fontWeight: FontWeight.w700, color: Color(0xFF333333))),
                       ],
                     ),
                   ],

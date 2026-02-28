@@ -6,9 +6,9 @@ class QuickStats extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const stats = [
-      {'label': 'Startups', 'value': '24', 'sub': 'disponíveis', 'color': Color(0xFF6A5ACD)},
-      {'label': 'Rentabilidade', 'value': '+8,4%', 'sub': 'este mês', 'color': Color(0xFF4CAF50)},
-      {'label': 'Investidores', 'value': '1.2K', 'sub': 'ativos', 'color': Color(0xFFFF9800)},
+      {'label': '---------', 'value': '%%%%', 'sub': '---------', 'color': Color(0xFF6A5ACD)},
+      {'label': '---------', 'value': '%%%%%', 'sub': '---------', 'color': Color(0xFF4CAF50)},
+      {'label': '---------', 'value': '%%%%', 'sub': '---------', 'color': Color(0xFFFF9800)},
     ];
 
     return Padding(

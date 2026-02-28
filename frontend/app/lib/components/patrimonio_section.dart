@@ -54,7 +54,7 @@ class _PatrimonioSectionState extends State<PatrimonioSection> {
           Row(
             children: [
               Text(
-                visible ? 'R\$ 1.247.850,00' : 'R\$ ••••••••••',
+                visible ? 'R\$ %%%%' : 'R\$ ••••••••••',
                 style: const TextStyle(
                   fontFamily: 'Inter',
                   fontSize: 26,
@@ -89,7 +89,7 @@ class _PatrimonioSectionState extends State<PatrimonioSection> {
               const Icon(Icons.trending_up, size: 12, color: Color(0xFF4CAF50)),
               const SizedBox(width: 6),
               const Text(
-                '+R\$ 8.320,00',
+                '+R\$ %%%%',
                 style: TextStyle(
                   color: Color(0xFF4CAF50),
                   fontFamily: 'Inter',
@@ -99,7 +99,7 @@ class _PatrimonioSectionState extends State<PatrimonioSection> {
               ),
               const SizedBox(width: 6),
               const Text(
-                '(+ 0,67%) hoje',
+                '(+ %%%%%) hoje',
                 style: TextStyle(
                   color: Color(0xFF777777),
                   fontFamily: 'Inter',
