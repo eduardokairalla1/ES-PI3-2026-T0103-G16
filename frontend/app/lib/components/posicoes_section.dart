@@ -67,153 +67,163 @@ class PosicoesSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                'Meus Investimentos',
-                style: TextStyle(
-                  fontFamily: 'Inter',
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xFF333333),
-                ),
-              ),
-              Row(
-                children: const [
-                  Text(
-                    'Ver todas',
-                    style: TextStyle(
-                      color: Color(0xFF6A5ACD),
-                      fontFamily: 'Inter',
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  SizedBox(width: 2),
-                  Icon(Icons.chevron_right, size: 14, color: Color(0xFF6A5ACD)),
-                ],
-              ),
-            ],
-          ),
+          _buildHeader(),
           const SizedBox(height: 12),
-          // Cards
-          Column(
-            children: positions.map((pos) {
-              final isPositive = true;
-              final varColor = isPositive ? const Color(0xFF4CAF50) : const Color(0xFFFF5722);
-
-              return GestureDetector(
-                onTap: () => onViewDashboard?.call(pos.id),
-                child: Container(
-                  margin: const EdgeInsets.only(bottom: 12),
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: const Color(0xFFEEEEEE)),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Color(0x0A000000),
-                        blurRadius: 2,
-                        offset: Offset(0, 1),
-                      ),
-                    ],
-                  ),
-                  child: Row(
-                    children: [
-                      const SizedBox(
-                        width: 44,
-                        height: 44,
-                        child: Center(
-                          child: Text(
-                            'imag',
-                            style: TextStyle(
-                              fontFamily: 'Inter',
-                              fontSize: 14,
-                              color: Color(0xFF777777),
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      // Info
-                      Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  pos.startup,
-                                  style: const TextStyle(
-                                    fontFamily: 'Inter',
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w700,
-                                    color: Color(0xFF333333),
-                                  ),
-                                ),
-                                Text(
-                                  '${pos.quantidade} ${pos.symbol}',
-                                  style: const TextStyle(
-                                    fontFamily: 'Inter',
-                                    fontSize: 12,
-                                    color: Color(0xFF777777),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Text(
-                                  'R\$ ${pos.valorAtual}',
-                                  style: const TextStyle(
-                                    fontFamily: 'Inter',
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w700,
-                                    color: Color(0xFF333333),
-                                  ),
-                                ),
-                                const SizedBox(height: 2),
-                                Row(
-                                  children: [
-                                    Icon(
-                                      isPositive ? Icons.trending_up : Icons.trending_down,
-                                      size: 12,
-                                      color: varColor,
-                                    ),
-                                    const SizedBox(width: 2),
-                                    Text(
-                                      '${isPositive ? '+' : ''}${pos.variacaoDiaria}%',
-                                      style: TextStyle(
-                                        fontFamily: 'Inter',
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w700,
-                                        color: varColor,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      const Icon(Icons.chevron_right, size: 18, color: Color(0xFFCCCCCC)),
-                    ],
-                  ),
-                ),
-              );
-            }).toList(),
-          ),
+          _buildPositionsList(positions),
         ],
       ),
+    );
+  }
+
+  Widget _buildHeader() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        const Text(
+          'Meus Investimentos',
+          style: TextStyle(
+            fontFamily: 'Inter',
+            fontSize: 16,
+            fontWeight: FontWeight.w700,
+            color: Color(0xFF333333),
+          ),
+        ),
+        Row(
+          children: const [
+            Text(
+              'Ver todas',
+              style: TextStyle(
+                color: Color(0xFF6A5ACD),
+                fontFamily: 'Inter',
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            SizedBox(width: 2),
+            Icon(Icons.chevron_right, size: 14, color: Color(0xFF6A5ACD)),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _buildPositionsList(List<TokenPosition> positions) {
+    return Column(
+      children: positions.map((pos) {
+        final isPositive = true;
+        final varColor = isPositive ? const Color(0xFF4CAF50) : const Color(0xFFFF5722);
+
+        return GestureDetector(
+          onTap: () => onViewDashboard?.call(pos.id),
+          child: Container(
+            margin: const EdgeInsets.only(bottom: 12),
+            padding: const EdgeInsets.all(16),
+            decoration: _cardDecoration(),
+            child: Row(
+              children: [
+                const SizedBox(
+                  width: 44,
+                  height: 44,
+                  child: Center(
+                    child: Text(
+                      'imag',
+                      style: TextStyle(
+                        fontFamily: 'Inter',
+                        fontSize: 14,
+                        color: Color(0xFF777777),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                // Info
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            pos.startup,
+                            style: const TextStyle(
+                              fontFamily: 'Inter',
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xFF333333),
+                            ),
+                          ),
+                          Text(
+                            '${pos.quantidade} ${pos.symbol}',
+                            style: const TextStyle(
+                              fontFamily: 'Inter',
+                              fontSize: 12,
+                              color: Color(0xFF777777),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            'R\$ ${pos.valorAtual}',
+                            style: const TextStyle(
+                              fontFamily: 'Inter',
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xFF333333),
+                            ),
+                          ),
+                          const SizedBox(height: 2),
+                          Row(
+                            children: [
+                              Icon(
+                                isPositive ? Icons.trending_up : Icons.trending_down,
+                                size: 12,
+                                color: varColor,
+                              ),
+                              const SizedBox(width: 2),
+                              Text(
+                                '${isPositive ? '+' : ''}${pos.variacaoDiaria}%',
+                                style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w700,
+                                  color: varColor,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 12),
+                const Icon(Icons.chevron_right, size: 18, color: Color(0xFFCCCCCC)),
+              ],
+            ),
+          ),
+        );
+      }).toList(),
+    );
+  }
+
+  BoxDecoration _cardDecoration() {
+    return BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(16),
+      border: Border.all(color: const Color(0xFFEEEEEE)),
+      boxShadow: const [
+        BoxShadow(
+          color: Color(0x0A000000),
+          blurRadius: 2,
+          offset: Offset(0, 1),
+        ),
+      ],
     );
   }
 }
