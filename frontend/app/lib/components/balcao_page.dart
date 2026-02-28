@@ -12,17 +12,17 @@ class _BalcaoPageState extends State<BalcaoPage> {
   String search = '';
 
   final orders = [
-    {"id": "1", "type": "buy", "startup": "EverTech", "symbol": "EVT", "qty": 100, "price": "R\$ 0,15", "total": "R\$ 15,00", "status": "Aberta", "emoji": "🧬"},
-    {"id": "2", "type": "sell", "startup": "FinnoLab", "symbol": "FNL", "qty": 50, "price": "R\$ 0,12", "total": "R\$ 6,00", "status": "Executada", "emoji": "💳"},
-    {"id": "3", "type": "buy", "startup": "MoveCity", "symbol": "MVC", "qty": 200, "price": "R\$ 0,08", "total": "R\$ 16,00", "status": "Aberta", "emoji": "🛴"},
+    {"id": "1", "type": "buy", "startup": "---------", "symbol": "---", "qty": "%%%%", "price": "R\$ %%%%", "total": "R\$ %%%%", "status": "---------", "emoji": " "},
+    {"id": "2", "type": "sell", "startup": "---------", "symbol": "---", "qty": "%%%%", "price": "R\$ %%%%", "total": "R\$ %%%%", "status": "---------", "emoji": " "},
+    {"id": "3", "type": "buy", "startup": "---------", "symbol": "---", "qty": "%%%%", "price": "R\$ %%%%", "total": "R\$ %%%%", "status": "---------", "emoji": " "},
   ];
 
   final market = [
-    {"startup": "EverTech", "symbol": "EVT", "price": "R\$ 0,15", "change": "+2,30%", "positive": true, "emoji": "🧬", "bg": const Color(0xFFFF5722)},
-    {"startup": "FinnoLab", "symbol": "FNL", "price": "R\$ 0,12", "change": "+1,56%", "positive": true, "emoji": "💳", "bg": const Color(0xFF3F51B5)},
-    {"startup": "DataBrave", "symbol": "DBR", "price": "R\$ 0,10", "change": "-1,20%", "positive": false, "emoji": "📊", "bg": const Color(0xFF212121)},
-    {"startup": "GreenLoop", "symbol": "GRL", "price": "R\$ 0,16", "change": "+0,43%", "positive": true, "emoji": "♻️", "bg": const Color(0xFF388E3C)},
-    {"startup": "MoveCity", "symbol": "MVC", "price": "R\$ 0,08", "change": "-0,80%", "positive": false, "emoji": "🛴", "bg": const Color(0xFF00BCD4)},
+    {"startup": "---------", "symbol": "---", "price": "R\$ %%%%", "change": "+%%%%", "positive": true, "emoji": " ", "bg": const Color(0xFFFF5722)},
+    {"startup": "---------", "symbol": "---", "price": "R\$ %%%%", "change": "+%%%%", "positive": true, "emoji": " ", "bg": const Color(0xFF3F51B5)},
+    {"startup": "---------", "symbol": "---", "price": "R\$ %%%%", "change": "-%%%%", "positive": false, "emoji": " ", "bg": const Color(0xFF212121)},
+    {"startup": "---------", "symbol": "---", "price": "R\$ %%%%", "change": "+%%%%", "positive": true, "emoji": " ", "bg": const Color(0xFF388E3C)},
+    {"startup": "---------", "symbol": "---", "price": "R\$ %%%%", "change": "-%%%%", "positive": false, "emoji": " ", "bg": const Color(0xFF00BCD4)},
   ];
 
   @override

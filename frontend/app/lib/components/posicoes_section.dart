@@ -4,9 +4,9 @@ class TokenPosition {
   final String id;
   final String startup;
   final String symbol;
-  final int quantidade;
-  final double valorAtual;
-  final double variacaoDiaria;
+  final String quantidade;
+  final String valorAtual;
+  final String variacaoDiaria;
   final String emoji;
   final Color bgColor;
 
@@ -32,32 +32,32 @@ class PosicoesSection extends StatelessWidget {
     final positions = [
       TokenPosition(
         id: "1",
-        startup: "FinnoLab",
-        symbol: "FNL",
-        quantidade: 250,
-        valorAtual: 25.0,
-        variacaoDiaria: 1.56,
-        emoji: "💳",
+        startup: "---------",
+        symbol: "---",
+        quantidade: "%%%%",
+        valorAtual: "%%%%",
+        variacaoDiaria: "%%%%",
+        emoji: " ",
         bgColor: const Color(0xFF3F51B5),
       ),
       TokenPosition(
         id: "2",
-        startup: "DataBrave",
-        symbol: "DBR",
-        quantidade: 150,
-        valorAtual: 15.0,
-        variacaoDiaria: -1.2,
-        emoji: "📊",
+        startup: "---------",
+        symbol: "---",
+        quantidade: "%%%%",
+        valorAtual: "%%%%",
+        variacaoDiaria: "%%%%",
+        emoji: " ",
         bgColor: const Color(0xFF212121),
       ),
       TokenPosition(
         id: "3",
-        startup: "GreenLoop",
-        symbol: "GRL",
-        quantidade: 400,
-        valorAtual: 64.0,
-        variacaoDiaria: 0.43,
-        emoji: "♻️",
+        startup: "---------",
+        symbol: "---",
+        quantidade: "%%%%",
+        valorAtual: "%%%%",
+        variacaoDiaria: "%%%%",
+        emoji: " ",
         bgColor: const Color(0xFF388E3C),
       ),
     ];
@@ -101,7 +101,7 @@ class PosicoesSection extends StatelessWidget {
           // Cards
           Column(
             children: positions.map((pos) {
-              final isPositive = pos.variacaoDiaria >= 0;
+              final isPositive = true;
               final varColor = isPositive ? const Color(0xFF4CAF50) : const Color(0xFFFF5722);
 
               return GestureDetector(
@@ -170,7 +170,7 @@ class PosicoesSection extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Text(
-                                  'R\$ ${pos.valorAtual.toStringAsFixed(2).replaceAll('.', ',')}',
+                                  'R\$ ${pos.valorAtual}',
                                   style: const TextStyle(
                                     fontFamily: 'Inter',
                                     fontSize: 14,
@@ -188,7 +188,7 @@ class PosicoesSection extends StatelessWidget {
                                     ),
                                     const SizedBox(width: 2),
                                     Text(
-                                      '${isPositive ? '+' : ''}${pos.variacaoDiaria.toStringAsFixed(2).replaceAll('.', ',')}%',
+                                      '${isPositive ? '+' : ''}${pos.variacaoDiaria}%',
                                       style: TextStyle(
                                         fontFamily: 'Inter',
                                         fontSize: 12,
