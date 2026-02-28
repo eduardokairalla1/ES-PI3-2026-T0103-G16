@@ -24,26 +24,18 @@ class PerfilPage extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(20, 24, 20, 16),
             child: Column(
               children: [
-                Container(
+                const SizedBox(
                   width: 80,
                   height: 80,
-                  margin: const EdgeInsets.only(bottom: 12),
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    gradient: LinearGradient(
-                      colors: [Color(0xFF6A5ACD), Color(0xFF4CAF50)],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                  ),
-                  alignment: Alignment.center,
-                  child: const Text(
-                    ' ',
-                    style: TextStyle(
-                      fontFamily: 'Inter',
-                      fontSize: 32,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
+                  child: Center(
+                    child: Text(
+                      'imag',
+                      style: TextStyle(
+                        fontFamily: 'Inter',
+                        fontSize: 16,
+                        color: Color(0xFF777777),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -152,15 +144,20 @@ class PerfilPage extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                         child: Row(
                           children: [
-                            Container(
+                            const SizedBox(
                               width: 36,
                               height: 36,
-                              decoration: BoxDecoration(
-                                color: item['bg'] as Color,
-                                borderRadius: BorderRadius.circular(12),
+                              child: Center(
+                                child: Text(
+                                  'imag',
+                                  style: TextStyle(
+                                    fontFamily: 'Inter',
+                                    fontSize: 12,
+                                    color: Color(0xFF777777),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
-                              alignment: Alignment.center,
-                              child: Icon(item['icon'] as IconData, size: 18, color: item['color'] as Color),
                             ),
                             const SizedBox(width: 12),
                             Expanded(

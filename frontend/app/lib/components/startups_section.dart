@@ -217,18 +217,19 @@ class _StartupsSectionState extends State<StartupsSection> {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Avatar
-                        Container(
+                        const SizedBox(
                           width: 48,
                           height: 48,
-                          decoration: BoxDecoration(
-                            color: startup.bgColor,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          alignment: Alignment.center,
-                          child: Text(
-                            startup.emoji,
-                            style: const TextStyle(fontSize: 20),
+                          child: Center(
+                            child: Text(
+                              'imag',
+                              style: TextStyle(
+                                fontFamily: 'Inter',
+                                fontSize: 14,
+                                color: Color(0xFF777777),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                         ),
                         const SizedBox(width: 12),

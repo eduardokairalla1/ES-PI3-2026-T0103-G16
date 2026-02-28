@@ -123,18 +123,19 @@ class PosicoesSection extends StatelessWidget {
                   ),
                   child: Row(
                     children: [
-                      // Avatar
-                      Container(
+                      const SizedBox(
                         width: 44,
                         height: 44,
-                        decoration: BoxDecoration(
-                          color: pos.bgColor,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        alignment: Alignment.center,
-                        child: Text(
-                          pos.emoji,
-                          style: const TextStyle(fontSize: 18),
+                        child: Center(
+                          child: Text(
+                            'imag',
+                            style: TextStyle(
+                              fontFamily: 'Inter',
+                              fontSize: 14,
+                              color: Color(0xFF777777),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
                       ),
                       const SizedBox(width: 12),

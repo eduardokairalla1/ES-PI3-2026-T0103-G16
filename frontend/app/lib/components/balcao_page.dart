@@ -165,15 +165,20 @@ class _BalcaoPageState extends State<BalcaoPage> {
                 ),
                 child: Row(
                   children: [
-                    Container(
+                    const SizedBox(
                       width: 44,
                       height: 44,
-                      decoration: BoxDecoration(
-                        color: item['bg'] as Color,
-                        borderRadius: BorderRadius.circular(12),
+                      child: Center(
+                        child: Text(
+                          'imag',
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontSize: 14,
+                            color: Color(0xFF777777),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
-                      alignment: Alignment.center,
-                      child: Text(item['emoji'] as String, style: const TextStyle(fontSize: 20)),
                     ),
                     const SizedBox(width: 12),
                     Expanded(
@@ -290,18 +295,19 @@ class _BalcaoPageState extends State<BalcaoPage> {
                 ),
                 child: Row(
                   children: [
-                    Container(
+                    const SizedBox(
                       width: 40,
                       height: 40,
-                      decoration: BoxDecoration(
-                        color: isBuy ? const Color(0xFFE8F5E9) : const Color(0xFFFBE9E7),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      alignment: Alignment.center,
-                      child: Icon(
-                        isBuy ? Icons.trending_up : Icons.trending_down,
-                        size: 16,
-                        color: isBuy ? const Color(0xFF4CAF50) : const Color(0xFFFF5722),
+                      child: Center(
+                        child: Text(
+                          'imag',
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontSize: 14,
+                            color: Color(0xFF777777),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                     ),
                     const SizedBox(width: 12),
