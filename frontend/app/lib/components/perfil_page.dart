@@ -6,13 +6,13 @@ class PerfilPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final menuItems = [
-      {'icon': Icons.account_balance_wallet, 'label': 'Minha Carteira', 'color': const Color(0xFF6A5ACD), 'bg': const Color(0xFFF0EEFF)},
-      {'icon': Icons.description, 'label': 'Extrato Completo', 'color': const Color(0xFF4CAF50), 'bg': const Color(0xFFE8F5E9)},
-      {'icon': Icons.star, 'label': 'Startups Favoritas', 'color': const Color(0xFFFF9800), 'bg': const Color(0xFFFFF3E0)},
-      {'icon': Icons.notifications, 'label': 'Notificações', 'color': const Color(0xFF2196F3), 'bg': const Color(0xFFE3F2FD)},
-      {'icon': Icons.security, 'label': 'Segurança', 'color': const Color(0xFF9C27B0), 'bg': const Color(0xFFF3E5F5)},
-      {'icon': Icons.settings, 'label': 'Configurações', 'color': const Color(0xFF607D8B), 'bg': const Color(0xFFECEFF1)},
-      {'icon': Icons.help_outline, 'label': 'Ajuda & Suporte', 'color': const Color(0xFFFF5722), 'bg': const Color(0xFFFBE9E7)},
+      {'icon': Icons.account_balance_wallet, 'label': '---------', 'color': const Color(0xFF6A5ACD), 'bg': const Color(0xFFF0EEFF)},
+      {'icon': Icons.description, 'label': '---------', 'color': const Color(0xFF4CAF50), 'bg': const Color(0xFFE8F5E9)},
+      {'icon': Icons.star, 'label': '---------', 'color': const Color(0xFFFF9800), 'bg': const Color(0xFFFFF3E0)},
+      {'icon': Icons.notifications, 'label': '---------', 'color': const Color(0xFF2196F3), 'bg': const Color(0xFFE3F2FD)},
+      {'icon': Icons.security, 'label': '---------', 'color': const Color(0xFF9C27B0), 'bg': const Color(0xFFF3E5F5)},
+      {'icon': Icons.settings, 'label': '---------', 'color': const Color(0xFF607D8B), 'bg': const Color(0xFFECEFF1)},
+      {'icon': Icons.help_outline, 'label': '---------', 'color': const Color(0xFFFF5722), 'bg': const Color(0xFFFBE9E7)},
     ];
 
     return SingleChildScrollView(
@@ -38,7 +38,7 @@ class PerfilPage extends StatelessWidget {
                   ),
                   alignment: Alignment.center,
                   child: const Text(
-                    'A',
+                    ' ',
                     style: TextStyle(
                       fontFamily: 'Inter',
                       fontSize: 32,
@@ -48,7 +48,7 @@ class PerfilPage extends StatelessWidget {
                   ),
                 ),
                 const Text(
-                  'Alex Mescla',
+                  '---------',
                   style: TextStyle(
                     fontFamily: 'Inter',
                     fontSize: 20,
@@ -58,7 +58,7 @@ class PerfilPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 2),
                 const Text(
-                  'alex@mescla.com.br',
+                  '---------',
                   style: TextStyle(
                     fontFamily: 'Inter',
                     fontSize: 13,
@@ -100,8 +100,8 @@ class PerfilPage extends StatelessWidget {
                 Expanded(
                   child: Column(
                     children: const [
-                      Text('3', style: TextStyle(fontFamily: 'Inter', fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF6A5ACD))),
-                      Text('Investimentos', style: TextStyle(fontFamily: 'Inter', fontSize: 10, color: Color(0xFF777777))),
+                      Text('%%%%', style: TextStyle(fontFamily: 'Inter', fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF6A5ACD))),
+                      Text('---------', style: TextStyle(fontFamily: 'Inter', fontSize: 10, color: Color(0xFF777777))),
                     ],
                   ),
                 ),
@@ -109,8 +109,8 @@ class PerfilPage extends StatelessWidget {
                 Expanded(
                   child: Column(
                     children: const [
-                      Text('R\$ 104', style: TextStyle(fontFamily: 'Inter', fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF4CAF50))),
-                      Text('Aplicado', style: TextStyle(fontFamily: 'Inter', fontSize: 10, color: Color(0xFF777777))),
+                      Text('R\$ %%%%', style: TextStyle(fontFamily: 'Inter', fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFF4CAF50))),
+                      Text('---------', style: TextStyle(fontFamily: 'Inter', fontSize: 10, color: Color(0xFF777777))),
                     ],
                   ),
                 ),
@@ -118,8 +118,8 @@ class PerfilPage extends StatelessWidget {
                 Expanded(
                   child: Column(
                     children: const [
-                      Text('6', style: TextStyle(fontFamily: 'Inter', fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFFFF9800))),
-                      Text('Favoritas', style: TextStyle(fontFamily: 'Inter', fontSize: 10, color: Color(0xFF777777))),
+                      Text('%%%%', style: TextStyle(fontFamily: 'Inter', fontSize: 18, fontWeight: FontWeight.w800, color: Color(0xFFFF9800))),
+                      Text('---------', style: TextStyle(fontFamily: 'Inter', fontSize: 10, color: Color(0xFF777777))),
                     ],
                   ),
                 ),

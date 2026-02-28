@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TopBar extends StatelessWidget {
   final String userName;
 
-  const TopBar({super.key, this.userName = "Alex"});
+  const TopBar({super.key, this.userName = "---------"});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class TopBar extends StatelessWidget {
                 ),
                 alignment: Alignment.center,
                 child: const Text(
-                  'M',
+                  ' ',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -42,7 +42,7 @@ class TopBar extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               const Text(
-                'MesclaInvest',
+                '---------',
                 style: TextStyle(
                   fontFamily: 'Inter',
                   fontSize: 17,
@@ -94,7 +94,7 @@ class TopBar extends StatelessWidget {
                     ),
                     alignment: Alignment.center,
                     child: const Text(
-                      'A',
+                      ' ',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
