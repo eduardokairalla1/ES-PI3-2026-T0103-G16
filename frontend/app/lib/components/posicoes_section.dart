@@ -110,8 +110,8 @@ class PosicoesSection extends StatelessWidget {
   Widget _buildPositionsList(List<TokenPosition> positions) {
     return Column(
       children: positions.map((pos) {
-        final isPositive = true;
-        final varColor = isPositive ? const Color(0xFF4CAF50) : const Color(0xFFFF5722);
+        bool isPositive = true;
+        Color varColor = isPositive ? const Color(0xFF4CAF50) : const Color(0xFFFF5722);
 
         return GestureDetector(
           onTap: () => onViewDashboard?.call(pos.id),
