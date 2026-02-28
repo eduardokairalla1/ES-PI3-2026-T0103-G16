@@ -19,24 +19,18 @@ class TopBar extends StatelessWidget {
           // Logo
           Row(
             children: [
-              Container(
+              const SizedBox(
                 width: 32,
                 height: 32,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFF6A5ACD), Color(0xFF4CAF50)],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                ),
-                alignment: Alignment.center,
-                child: const Text(
-                  ' ',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 13,
+                child: Center(
+                  child: Text(
+                    'imag',
+                    style: TextStyle(
+                      fontFamily: 'Inter',
+                      fontSize: 10,
+                      color: Color(0xFF777777),
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
@@ -55,50 +49,36 @@ class TopBar extends StatelessWidget {
           // Right side
           Row(
             children: [
-              Stack(
-                children: [
-                  Container(
+                  const SizedBox(
                     width: 36,
                     height: 36,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xFFF5F5F5),
-                    ),
-                    alignment: Alignment.center,
-                    child: const Icon(Icons.notifications_outlined, size: 18, color: Color(0xFF777777)),
-                  ),
-                  Positioned(
-                    top: 0,
-                    right: 0,
-                    child: Container(
-                      width: 10,
-                      height: 10,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: const Color(0xFFFF5722),
-                        border: Border.all(color: Colors.white, width: 2),
+                    child: Center(
+                      child: Text(
+                        'imag',
+                        style: TextStyle(
+                          fontFamily: 'Inter',
+                          fontSize: 10,
+                          color: Color(0xFF777777),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
-                ],
-              ),
               const SizedBox(width: 12),
               Row(
                 children: [
-                  Container(
+                  const SizedBox(
                     width: 32,
                     height: 32,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xFF6A5ACD),
-                    ),
-                    alignment: Alignment.center,
-                    child: const Text(
-                      ' ',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 13,
+                    child: Center(
+                      child: Text(
+                        'imag',
+                        style: TextStyle(
+                          fontFamily: 'Inter',
+                          fontSize: 10,
+                          color: Color(0xFF777777),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

@@ -91,28 +91,20 @@ class PortfolioPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFE8F5E9),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Row(
-                        children: const [
-                          Icon(Icons.trending_up, size: 12, color: Color(0xFF4CAF50)),
-                          SizedBox(width: 4),
-                          Text(
-                            '%%%%%',
+                      const SizedBox(
+                        height: 20,
+                        child: Center(
+                          child: Text(
+                            'imag',
                             style: TextStyle(
-                              color: Color(0xFF4CAF50),
                               fontFamily: 'Inter',
-                              fontSize: 12,
-                              fontWeight: FontWeight.w700,
+                              fontSize: 10,
+                              color: Color(0xFF777777),
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
-                        ],
+                        ),
                       ),
-                    ),
                   ],
                 ),
                 const SizedBox(height: 16),
@@ -240,17 +232,19 @@ class PortfolioPage extends StatelessWidget {
                       padding: const EdgeInsets.only(bottom: 12),
                       child: Row(
                         children: [
-                          Container(
+                          const SizedBox(
                             width: 36,
                             height: 36,
-                            decoration: BoxDecoration(
-                              color: isBuy ? const Color(0xFFE8F5E9) : const Color(0xFFF0EEFF),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Icon(
-                              isBuy ? Icons.trending_up : Icons.trending_down,
-                              size: 16,
-                              color: isBuy ? const Color(0xFF4CAF50) : const Color(0xFF6A5ACD),
+                            child: Center(
+                              child: Text(
+                                'imag',
+                                style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontSize: 10,
+                                  color: Color(0xFF777777),
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ),
                           ),
                           const SizedBox(width: 12),
