@@ -6,6 +6,7 @@ Firebase project using Cloud Functions (TypeScript) and Firestore.
 
 - [Node.js LTS](https://nodejs.org/)
 - [Firebase CLI](https://firebase.google.com/docs/cli) — `npm install -g firebase-tools`
+- Java (required by the Firestore emulator) — `sudo apt install default-jre -y`
 
 ## Setup
 
